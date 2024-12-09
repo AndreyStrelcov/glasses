@@ -1,0 +1,37 @@
+{% if categories %}
+	<nav class="header-nav">
+		<ul class="flex items-center">
+
+      {% for category in categories %}
+        {% if category.children %}
+
+
+      {% else %}
+      <li class="header-nav__item">
+				<a href="{{ category.href }}" class="header-nav__link">{{ category.name }}</a>
+			</li>
+        {% endif %}
+      {% endfor %}
+
+			{# <li class="header-nav__item">
+				<a href="{{ category.href }}" class="header-nav__link">Oкуляри</a>
+			</li>
+			<li class="header-nav__item">
+				<a href="" class="header-nav__link--red">Розпродаж</a>
+			</li> #}
+			{# <div class="nav-bottom">
+				<div class="nav-bottom__icon">
+					<svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M19.1667 4V3.5H18.6667H13.3334H12.8334V4V4.33333C12.8334 4.34241 12.8334 4.35148 12.8334 4.36054C12.8333 4.57257 12.8333 4.77864 12.8561 4.94859C12.8819 5.14019 12.9447 5.35883 13.1263 5.54044C13.3079 5.72205 13.5265 5.78481 13.7181 5.81057C13.8881 5.83342 14.0941 5.83338 14.3062 5.83334C14.3152 5.83334 14.3243 5.83333 14.3334 5.83333H17.6667C17.6758 5.83333 17.6849 5.83334 17.6939 5.83334C17.9059 5.83338 18.112 5.83342 18.282 5.81057C18.4736 5.78481 18.6922 5.72205 18.8738 5.54044C19.0554 5.35883 19.1182 5.14019 19.1439 4.94859C19.1668 4.77864 19.1668 4.57257 19.1667 4.36054C19.1667 4.35148 19.1667 4.34241 19.1667 4.33333V4Z" stroke="#222222"/>
+						<rect x="8.5" y="3.16669" width="15" height="25.6667" rx="1.5" stroke="#222222"/>
+						<circle cx="16" cy="24" r="1.33333" fill="#222222"/>
+					</svg>
+				</div>
+				<a href="nav-bottom__phone">
+					Телефон
+					<span>+38(050)656-22-98</span>
+				</a>
+			</div> #}
+		</ul>
+	</nav>
+{% endif %}

@@ -22,7 +22,7 @@ final class Twig {
 		// initialize Twig environment
 		$config = array(
 			'autoescape'  => false,
-			'debug'       => false,
+			'debug'       => true,
 			'auto_reload' => true,
 			'cache'       => DIR_CACHE . 'template/'
 		);
@@ -35,6 +35,7 @@ final class Twig {
             $loader = new \Twig_Loader_Chain(array($loader1, $loader2));
 
 			$twig = new \Twig\Environment($loader, $config);
+			$twig->addExtension(new \Twig\Extension\DebugExtension);
 
 			return $twig->render($filename . '.twig', $this->data);
 		} catch (Exception $e) {
