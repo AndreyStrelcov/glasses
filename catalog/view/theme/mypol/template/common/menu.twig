@@ -3,14 +3,21 @@
 		<ul class="flex items-center">
 
       {% for category in categories %}
-        {% if category.children %}
+      {% if category.children %}
 
+		<li class="dropdown">
+          <a href="{{ category.href }}" class="dropdown-toggle" data-toggle="dropdown">{{ category.name }}</a>
+		</li>  
 
-      {% else %}
-      <li class="header-nav__item">
-				<a href="{{ category.href }}" class="header-nav__link">{{ category.name }}</a>
-			</li>
-        {% endif %}
+        {% for child in children.children %}
+            <li><a href="{{ child.href }}">{{ child.name }}</a></li>
+        {% endfor %}
+
+      	{% else %}
+      	<li class="header-nav__item">
+			<a href="{{ category.href }}" class="header-nav__link">{{ category.name }}</a>
+		</li>
+      {% endif %}
       {% endfor %}
 
 			{# <li class="header-nav__item">
