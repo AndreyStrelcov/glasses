@@ -18,8 +18,10 @@
                 <img src="catalog/language/{{ language.code }}/{{ language.code }}.svg" alt="{{ language.name }}" title="{{ language.name }}" />
                   {{ language.name }} 
             </button>
+            {% if not loop.last %}
+            <li role="separator" class="divider"></li>
+            {% endif %}
         </li>
-        <li role="separator" class="divider"></li>
     {% endfor %}    
     </ul>
     <input type="hidden" name="code" value="" />
