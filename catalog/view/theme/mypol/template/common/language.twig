@@ -1,0 +1,28 @@
+{% if languages|length > 1 %}
+<form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-language" class="flex header-top__lang">
+  <button class="flex items-center btn-list" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  {% for language in languages %}
+  {% if language.code == code %}    
+    <img src="catalog/language/{{ language.code }}/{{ language.code }}.svg" alt="{{ language.name }}" title="{{ language.name }}">
+  {% endif %}
+  {% endfor %}    
+    <span>{{ text_language }}</span>
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10.5 5.25L7 8.75L3.5 5.25" stroke="white"/>
+    </svg>
+  </button>
+    <ul class="dropdown-menu drop-list drop-list__lang" aria-labelledby="dropdownMenu2">
+    {% for language in languages %}  
+        <li>
+            <button name="{{ language.code }}" class="btn-list flex items-center language-select">
+                <img src="catalog/language/{{ language.code }}/{{ language.code }}.svg" alt="{{ language.name }}" title="{{ language.name }}" />
+                  {{ language.name }} 
+            </button>
+        </li>
+        <li role="separator" class="divider"></li>
+    {% endfor %}    
+    </ul>
+    <input type="hidden" name="code" value="" />
+    <input type="hidden" name="redirect" value="{{ redirect }}" />
+</form>
+{% endif %}

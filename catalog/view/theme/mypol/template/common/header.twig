@@ -65,94 +65,58 @@
 </head>
 <body>
   <header class="header">
-    {# Header top start #}
-    <div class="header-top"> 
-        <div class="container-default flex items-center justify-between header-top-wrap">
-            <div class="flex items-center">
-                {# Header lang start #}
-                <form class="flex header-top__lang">
-                    <button id="btn-lang" class="flex items-center btn-list">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10L0 10Z" fill="#F3CD0B"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10H20Z" fill="#0BBBF3"/>
-                    </svg>
-                    <span>Укр</span>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.5 5.25L7 8.75L3.5 5.25" stroke="white"/>
-                    </svg>
-                    </button>
-                    <ul id="list-lang" class="drop-list drop-list__lang">
-                        <li>
-                            <button class="btn-list flex items-center">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10L0 10Z" fill="#F3CD0B"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10H20Z" fill="#0BBBF3"/>
-                                </svg>
-                                Українська 
-                            </button>
-                        </li>
-                        <li>
-                            <button class="btn-list flex items-center">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10L0 10Z" fill="#F3CD0B"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10H20Z" fill="#0BBBF3"/>
-                                </svg>
-                                Російська 
-                            </button>
-                        </li>
-                    </ul>
-                </form>
-                {# Header lang end #}
+        {# Header top start #}
+        <div class="header-top"> 
+            <div class="container-default flex items-center justify-between h-36">
+                <div class="flex items-center">
+                    <!-- Header lang start -->
+                    {{ language }}
+                    <!-- Header lang end -->
 
-                {# Header contact start #}
-                <div class="header-top__contact">
-                    <button id="btn-list" class="btn-list line-v flex items-center">
-                        <span>Контакти</span>
+                    <!-- Header contact start -->
+                    <div class="header-top__contact">
+                        <button class="btn-list line-v flex items-center" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span>Контакти</span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5 5.25L7 8.75L3.5 5.25" stroke="white"/>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu drop-list drop-list__contact" aria-labelledby="dropdownMenu1">
+                          <li><a href="#">+38(067)555-88-99</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">+38(067)555-88-99</a></li>
+                        </ul>
+                      </div>
+                    <!-- Header contact end -->  
+                </div>          
+                <!-- Header help start -->
+                <div class="header-top__right flex">
+                    <div class="mr5">
+                        <a href="#">Обмін і повернення</a>
+                    </div>
+                    <div class="line-v">
+                        <a href="#">Доставка і оплата</a>
+                    </div>
+                </div>
+                <!-- Help mobile -->
+                <div class="header-top__right--mob">
+                    <button class="flex items-center btn-list" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span>Допомога</span>
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.5 5.25L7 8.75L3.5 5.25" stroke="white"/>
                         </svg>
                     </button>
-                    <ul id="list" class="drop-list drop-list__contact">
-                        <li>
-                            <a href="" class="">+38(067)555-88-99</a>
-                        </li>
-                        <li>
-                            <a href="" class="">+38(067)555-88-99</a>
-                        </li>
+                    <ul class="dropdown-menu drop-list drop-list__right" aria-labelledby="dropdownMenu3">
+                      <li><a href="#">Обмін і повернення</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Доставка і оплата</a></li>
                     </ul>
-                </div>            
-            </div>  
-            {# Header contact end #}
-             
-            {# Header help start #}
-            <div class="header-top__right flex">
-                <div class="mr5">
-                    <a href="#">Обмін і повернення</a>
                 </div>
-                <div class="line-v">
-                    <a href="#">Доставка і оплата</a>
-                </div>
+                <!-- Help mobile end -->
+                <!-- Header help end -->
             </div>
-            <div class="header-top__right--mob">
-                <button class="flex items-center btn-list">
-                    <span>Допомога</span>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.5 5.25L7 8.75L3.5 5.25" stroke="white"/>
-                    </svg>
-                </button>
-                <ul id="list" class="drop-list drop-list__right">
-                    <li>
-                        <a href="" class="">Обмін і повернення</a>
-                    </li>
-                    <li>
-                        <a href="" class="">Доставка і оплата</a>
-                    </li>
-                </ul>
-            </div>
-            {# Header help end #}
         </div>
-    </div>
-    {# Header top end #}
+        <!--------------- Header top end ------------------>
 
     {# Header button start #}
     <div class="header-menu">
