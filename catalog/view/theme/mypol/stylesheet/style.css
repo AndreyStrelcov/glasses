@@ -140,7 +140,10 @@ html {
 .header-top__right--mob {
   display: none;
 }
-
+/* Color last element in menu */
+.header-menu__list .last-item a {
+  color: #b40400;
+}
 @media (max-width: 575px) {
   .header-top__right {
     display: none;

@@ -115,10 +115,11 @@
         </div>
         {# Header top end #}
 
-    {# Header button start #}
-    <div class="line-b">
+
+        {# Header second start #}
+        <div class="line-b">
             <div class="container-default header-second flex items-center">
-                <!-- Logo start -->
+                
                 <div class="header-logo">
                     {% if logo %}
                         {% if home == og_url %}
@@ -130,56 +131,81 @@
                         <h1><a href="{{ home }}">{{ name }}</a></h1>
                     {% endif %}
                 </div>
-            {# Menu header start #}
 
             {{ menu }}
 
-            {# Menu header end #}
-            <div class="header-icons flex items-center">
-                <div class="header-menu__search">
-                    <input type="text" class="header-input" placeholder="Пошук окулярів">
-                    <button class="btn-list btn-search">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="14.6666" cy="14.6667" r="8" stroke="#222222"/>
-                            <path d="M26.6666 26.6667L22.6666 22.6667" stroke="#222222" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="header-menu__basket">
-                    <a href="">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.66663 6H7.22511C7.92083 6 8.26869 6 8.53058 6.18876C8.79246 6.37752 8.90247 6.70753 9.12247 7.36754L9.99996 10" stroke="#222222" stroke-linecap="round"/>
-                            <path d="M23.3333 23.3333H10.7345C10.1233 23.3333 9.81775 23.3333 9.60644 23.2276C9.31329 23.0808 9.11067 22.7997 9.06417 22.4752C9.03064 22.2413 9.12728 21.9514 9.32055 21.3716V21.3716C9.53467 20.7292 9.64173 20.408 9.82312 20.1582C10.0746 19.812 10.4304 19.5555 10.8384 19.4264C11.1328 19.3333 11.4713 19.3333 12.1485 19.3333H19.3333" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19.6787 19.3333H13.971C12.6917 19.3333 12.0521 19.3333 11.5512 19.003C11.0502 18.6727 10.7983 18.0848 10.2944 16.909L9.12556 14.1818C8.31606 12.2929 7.91131 11.3485 8.35592 10.6743C8.80053 10 9.82802 10 11.883 10H22.1638C24.4629 10 25.6124 10 26.046 10.7471C26.4795 11.4942 25.9092 12.4923 24.7686 14.4884L23.1517 17.3179C22.5898 18.3013 22.3088 18.793 21.8432 19.0632C21.3777 19.3333 20.8114 19.3333 19.6787 19.3333Z" stroke="#222222" stroke-linecap="round"/>
-                            <circle cx="22.6667" cy="26.6667" r="1.33333" fill="#222222"/>
-                            <circle cx="12" cy="26.6667" r="1.33333" fill="#222222"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="header-menu__favorite">
-                    <a href="">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.93428 18.5443L15.3154 27.3568C15.6398 27.6616 15.802 27.814 16 27.814C16.1981 27.814 16.3603 27.6616 16.6847 27.3568L26.0658 18.5443C28.674 16.0941 28.9908 12.0621 26.7971 9.23477L26.3846 8.70313C23.7604 5.32078 18.4929 5.88803 16.6489 9.75154C16.3885 10.2973 15.6116 10.2973 15.3512 9.75154C13.5072 5.88803 8.23967 5.32078 5.61544 8.70313L5.20296 9.23477C3.0093 12.0621 3.32604 16.0941 5.93428 18.5443Z" stroke="#222222"/>
-                        </svg>
-                    </a>
+                <!-- Start block right -->
+                <div class="header-icons flex items-center">
+                    
+                    <div id="search" class="input-group">
+                        <button id="openSearch" class="btn-list btn-search">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="14.6666" cy="14.6667" r="8" stroke="#222222"/>
+                                <path d="M26.6666 26.6667L22.6666 22.6667" stroke="#222222" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Всплывающее окно поиска -->
+                    <div id="searchPopup" class="search-popup">
+                        <div class="search-content">
+                            <button id="closeSearch" class="close-btn">✖</button>
+                            <input type="text" name="search" value="" placeholder="Пошук окулярів" class="header-input" />
+                            <button class="">Найти</button>
+                        </div>
+                    </div>
+
+
+                    
+                    <div id="cart" class="header-menu__basket flex">
+                        <button type="button" data-toggle="dropdown" data-loading-text="" class="dropdown-toggle">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.66663 6H7.22511C7.92083 6 8.26869 6 8.53058 6.18876C8.79246 6.37752 8.90247 6.70753 9.12247 7.36754L9.99996 10" stroke="#222222" stroke-linecap="round"/>
+                                <path d="M23.3333 23.3333H10.7345C10.1233 23.3333 9.81775 23.3333 9.60644 23.2276C9.31329 23.0808 9.11067 22.7997 9.06417 22.4752C9.03064 22.2413 9.12728 21.9514 9.32055 21.3716V21.3716C9.53467 20.7292 9.64173 20.408 9.82312 20.1582C10.0746 19.812 10.4304 19.5555 10.8384 19.4264C11.1328 19.3333 11.4713 19.3333 12.1485 19.3333H19.3333" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.6787 19.3333H13.971C12.6917 19.3333 12.0521 19.3333 11.5512 19.003C11.0502 18.6727 10.7983 18.0848 10.2944 16.909L9.12556 14.1818C8.31606 12.2929 7.91131 11.3485 8.35592 10.6743C8.80053 10 9.82802 10 11.883 10H22.1638C24.4629 10 25.6124 10 26.046 10.7471C26.4795 11.4942 25.9092 12.4923 24.7686 14.4884L23.1517 17.3179C22.5898 18.3013 22.3088 18.793 21.8432 19.0632C21.3777 19.3333 20.8114 19.3333 19.6787 19.3333Z" stroke="#222222" stroke-linecap="round"/>
+                                <circle cx="22.6667" cy="26.6667" r="1.33333" fill="#222222"/>
+                                <circle cx="12" cy="26.6667" r="1.33333" fill="#222222"/>
+                            </svg> 
+                            <span id="cart-total">0</span>
+                        </button>
+                    </div>
+
+                    <div class="header-menu__favorite">
+                        <a href="">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.93428 18.5443L15.3154 27.3568C15.6398 27.6616 15.802 27.814 16 27.814C16.1981 27.814 16.3603 27.6616 16.6847 27.3568L26.0658 18.5443C28.674 16.0941 28.9908 12.0621 26.7971 9.23477L26.3846 8.70313C23.7604 5.32078 18.4929 5.88803 16.6489 9.75154C16.3885 10.2973 15.6116 10.2973 15.3512 9.75154C13.5072 5.88803 8.23967 5.32078 5.61544 8.70313L5.20296 9.23477C3.0093 12.0621 3.32604 16.0941 5.93428 18.5443Z" stroke="#222222"/>
+                            </svg>
+                        </a>
+                    </div>  
+
+
+                    <!-- <li>
+                        <a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}">
+                            <i class="fa fa-heart"></i> 
+                            <span class="hidden-xs hidden-sm hidden-md">{{ text_wishlist }}</span>
+                        </a>
+                    </li> -->
+
+
+                    <div class="header-menu__user">
+                        <a href="">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.8333 10.6667C20.8333 13.3361 18.6693 15.5 16 15.5C13.3306 15.5 11.1666 13.3361 11.1666 10.6667C11.1666 7.9973 13.3306 5.83334 16 5.83334C18.6693 5.83334 20.8333 7.9973 20.8333 10.6667Z" stroke="#292929" stroke-linecap="round"/>
+                                <path d="M6.85847 21.3783C7.7069 19.1009 10.0814 18 12.5117 18H19.4883C21.9186 18 24.2931 19.1009 25.1415 21.3783C25.5255 22.409 25.849 23.6354 25.9594 25.0002C26.004 25.5507 25.5523 26 25 26H7C6.44772 26 5.99602 25.5507 6.04055 25.0002C6.15095 23.6354 6.47449 22.409 6.85847 21.3783Z" stroke="#292929" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="menu-mob">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>   
                 </div>  
-                <div class="header-menu__user">
-                    <a href="">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.8333 10.6667C20.8333 13.3361 18.6693 15.5 16 15.5C13.3306 15.5 11.1666 13.3361 11.1666 10.6667C11.1666 7.9973 13.3306 5.83334 16 5.83334C18.6693 5.83334 20.8333 7.9973 20.8333 10.6667Z" stroke="#292929" stroke-linecap="round"/>
-                            <path d="M6.85847 21.3783C7.7069 19.1009 10.0814 18 12.5117 18H19.4883C21.9186 18 24.2931 19.1009 25.1415 21.3783C25.5255 22.409 25.849 23.6354 25.9594 25.0002C26.004 25.5507 25.5523 26 25 26H7C6.44772 26 5.99602 25.5507 6.04055 25.0002C6.15095 23.6354 6.47449 22.409 6.85847 21.3783Z" stroke="#292929" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                </div>   
-                <div class="burger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>   
+                {# End block right #}
+            </div>
         </div>
-    </div>
-    {# Header button end #}
+        {# Header second end #}
+
 
     {# Promo line #}
     <div class="header-promo container-default flex items-center">
