@@ -20,8 +20,6 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 // Mobile menu end
 
-
-
 // Получаем элементы
 const openSearch = document.getElementById('openSearch');
 const closeSearch = document.getElementById('closeSearch');
@@ -43,4 +41,7 @@ window.addEventListener('click', (event) => {
     searchPopup.style.display = 'none';
   }
 });
+
+
+
 

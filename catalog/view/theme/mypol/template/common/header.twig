@@ -35,7 +35,7 @@
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
 {# Customized js #}
-<script src="catalog/view/javascript/script.js" type="text/javascript"></script>
+
 
 {# Customized font #}
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,25 +137,8 @@
                 <!-- Start block right -->
                 <div class="header-icons flex items-center">
                     
-                    <div id="search" class="input-group">
-                        <button id="openSearch" class="btn-list btn-search">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="14.6666" cy="14.6667" r="8" stroke="#222222"/>
-                                <path d="M26.6666 26.6667L22.6666 22.6667" stroke="#222222" stroke-linecap="round"/>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- Всплывающее окно поиска -->
-                    <div id="searchPopup" class="search-popup">
-                        <div class="search-content">
-                            <button id="closeSearch" class="close-btn">✖</button>
-                            <input type="text" name="search" value="" placeholder="Пошук окулярів" class="header-input" />
-                            <button class="">Найти</button>
-                        </div>
-                    </div>
-
-
+                    {{search}}
+        
                     
                     <div id="cart" class="header-menu__basket flex">
                         <button type="button" data-toggle="dropdown" data-loading-text="" class="dropdown-toggle">
