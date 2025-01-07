@@ -1,0 +1,162 @@
+@use "base" as *;
+.header-second {
+    justify-content: space-between;
+    height: 80px;
+}
+.header-menu__search {
+    position: relative;
+    margin-right: 10px;
+}
+.header-input {
+    padding: 10px 30px;
+    border: 1px solid $border;
+    border-radius: 5px;
+}
+// .btn-search {
+//     position: absolute;
+//     top: 3px;
+//     left: -1px;
+// }
+.header-menu {
+    &__basket {
+        button {
+            position: relative;
+            background: none;
+            border: none;
+        }
+        span {
+            position: absolute;
+            font-size: 13px;
+            font-weight: 500;
+            right: 1px;
+            color: $red;
+        }
+    }
+    &__item {
+        margin-right: 30px;
+        a {
+            color: $black;
+            font-weight: 500;
+            text-decoration: none;
+            &:hover {
+                color: $brown;
+            }
+        }
+    }
+}
+
+.menu-mob {
+    display: none;
+}
+@media (max-width: 1200px) {
+  // Hamburger menu
+  .header-menu {
+    position: fixed;
+    top: 116px;
+    right: -100%;
+    height: 100vh;
+    width: 75%;
+    background: #f4f4f4;
+    z-index: 20;
+    transition: 1s all;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    &__list {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        height: 100%;
+        padding-top: 40px;
+        }
+    } 
+    .menu-mob {
+        display: block;
+        margin-left: 10px;
+        width: 30px;
+        height: 14px;
+        z-index: 30;
+        cursor: pointer;
+        span {
+            height: 2px;
+            width: 100%;
+            display: block;
+            background: #555;
+            margin-bottom: 4px;
+            transition: 0.4s all;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .menu-mob__active {
+        span {
+            margin-bottom: -2px;
+            &:nth-child(1) {
+                transform: translateY(3px) rotate(-45deg);
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                transform: translateY(3px) rotate(45deg);
+            }
+        }
+    }
+    .header-menu__active {
+        // display: block;
+        right: 0px;
+    }
+    // Hamburger menu end
+
+    .header-menu__search {
+        margin-right: 0;
+    }
+    // .header-input {
+    //     display: none;
+    // }
+    .btn-search {
+        position: relative;
+        top: 0;
+        left: 15px;
+    }
+}
+
+
+
+
+/* Стили для всплывающего окна */
+.search-popup {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(15,15,15,.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Содержимое окна */
+  .search-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Кнопка закрытия */
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    color: #fff;
+  }
+  
