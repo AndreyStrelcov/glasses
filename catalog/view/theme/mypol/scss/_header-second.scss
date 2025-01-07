@@ -1,22 +1,23 @@
 @use "base" as *;
+/*Heade second block*/
 .header-second {
     justify-content: space-between;
     height: 80px;
+}
+//Color last element in menu//
+.header-menu__list .last-item a {
+    color: #b40400;
 }
 .header-menu__search {
     position: relative;
     margin-right: 10px;
 }
 .header-input {
-    padding: 10px 30px;
+    padding: 10px;
     border: 1px solid $border;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
+    box-shadow: none;
 }
-// .btn-search {
-//     position: absolute;
-//     top: 3px;
-//     left: -1px;
-// }
 .header-menu {
     &__basket {
         button {
@@ -44,7 +45,9 @@
         }
     }
 }
-
+#cart {
+    margin: 0;
+}
 .menu-mob {
     display: none;
 }
@@ -102,53 +105,50 @@
         }
     }
     .header-menu__active {
-        // display: block;
         right: 0px;
     }
     // Hamburger menu end
 
+    // Search start
     .header-menu__search {
         margin-right: 0;
     }
-    // .header-input {
-    //     display: none;
-    // }
-    .btn-search {
-        position: relative;
-        top: 0;
-        left: 15px;
-    }
+    .search-form-wrapper {
+        display: flex;
+      }
+      .search-btn {
+        background: #e5e5e5;
+        border: none;
+        cursor: pointer;
+        border-radius: 0 5px 5px 0;
+        width: 40px;
+      }
 }
-
-
-
-
-/* Стили для всплывающего окна */
+// Стили для всплывающего окна //
 .search-popup {
-    display: none; /* Скрыто по умолчанию */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    // background-color: rgba(0, 0, 0, 0.5);
     background: rgba(15,15,15,.7);
     z-index: 1000;
     justify-content: center;
     align-items: center;
   }
   
-  /* Содержимое окна */
+  // Содержимое окна //
   .search-content {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     width: 90%;
-    max-width: 400px;
+    max-width: 600px;
     text-align: center;
   }
   
-  /* Кнопка закрытия */
+  // Кнопка закрытия //
   .close-btn {
     background: none;
     border: none;
@@ -158,5 +158,4 @@
     top: 40px;
     right: 10px;
     color: #fff;
-  }
-  
+  }/* Header second end */

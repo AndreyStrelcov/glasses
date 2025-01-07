@@ -1,4 +1,4 @@
-@charset "UTF-8";
+/*Base block*/
 * {
   box-sizing: border-box;
 }
@@ -11,6 +11,8 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
+/*Base end*/
+/*Grid block*/
 .container-default {
   max-width: 1400px;
   padding: 0 15px;
@@ -43,6 +45,8 @@ html {
   margin-right: 5px;
 }
 
+/*Grid end*/
+/*Components block*/
 .drop-list {
   display: none;
   position: absolute;
@@ -73,15 +77,20 @@ html {
 }
 
 .line-b {
-  border-bottom: 1px solid #282828;
+  border-bottom: 1px solid #e5e5e5;
 }
 
+/*Components end*/
+/*Header top*/
 .header-top {
   background: #292929;
   font-size: 13px;
 }
 .header-top__lang {
   position: relative;
+}
+.header-top__lang span {
+  margin-left: 5px;
 }
 .header-top__contact {
   position: relative;
@@ -146,10 +155,15 @@ html {
     display: block;
     color: #ffffff;
   }
-}
+} /*Header top end*/
+/*Heade second block*/
 .header-second {
   justify-content: space-between;
   height: 80px;
+}
+
+.header-menu__list .last-item a {
+  color: #b40400;
 }
 
 .header-menu__search {
@@ -158,9 +172,10 @@ html {
 }
 
 .header-input {
-  padding: 10px 30px;
+  padding: 10px;
   border: 1px solid #e5e5e5;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
+  box-shadow: none;
 }
 
 .header-menu__basket button {
@@ -185,6 +200,10 @@ html {
 }
 .header-menu__item a:hover {
   color: #ae946d;
+}
+
+#cart {
+  margin: 0;
 }
 
 .menu-mob {
@@ -247,15 +266,19 @@ html {
   .header-menu__search {
     margin-right: 0;
   }
-  .btn-search {
-    position: relative;
-    top: 0;
-    left: 15px;
+  .search-form-wrapper {
+    display: flex;
+  }
+  .search-btn {
+    background: #e5e5e5;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    width: 40px;
   }
 }
-/* Стили для всплывающего окна */
 .search-popup {
-  display: none; /* Скрыто по умолчанию */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -267,17 +290,15 @@ html {
   align-items: center;
 }
 
-/* Содержимое окна */
 .search-content {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
   width: 90%;
-  max-width: 400px;
+  max-width: 600px;
   text-align: center;
 }
 
-/* Кнопка закрытия */
 .close-btn {
   background: none;
   border: none;
@@ -287,8 +308,7 @@ html {
   top: 40px;
   right: 10px;
   color: #fff;
-}
-
+} /* Header second end */
 .header-promo {
   height: 36px;
   justify-content: center;

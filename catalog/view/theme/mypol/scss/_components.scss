@@ -1,3 +1,4 @@
+/*Components block*/
 // Dropdown lists in header-top
 @use "base" as *;
 .drop-list {
@@ -29,6 +30,6 @@
     color:#ffffff;
 }
 .line-b {
-    border-bottom: 1px solid #282828;
+    border-bottom: 1px solid $border;
 }
-
+/*Components end*/
