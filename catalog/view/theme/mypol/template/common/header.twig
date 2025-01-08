@@ -50,6 +50,7 @@
 
 {# Customized stylesheet #}
 <link href="catalog/view/theme/mypol/stylesheet/reset.css" rel="stylesheet">
+{# <link href="catalog/view/theme/mypol/stylesheet/normalize.css" rel="stylesheet"> #}
 <link href="catalog/view/theme/mypol/stylesheet/main.css" rel="stylesheet">
 
 {% for script in scripts %}
@@ -115,11 +116,9 @@
         </div>
         {# Header top end #}
 
-
         {# Header second start #}
         <div class="line-b">
-            <div class="container-default header-second flex items-center">
-                
+            <div class="container-default header-second flex items-center">               
                 <div class="header-logo">
                     {% if logo %}
                         {% if home == og_url %}
@@ -135,17 +134,18 @@
             {{ menu }}
 
                 <!-- Start block right -->
-                <div class="header-icons flex items-center">
+                <div class="header-second__right flex items-center">
                     
                     {{search}}
-        
-                    
-                    <div id="cart" class="header-menu__basket flex">
+                          
+                    {# <div id="cart" class="header-menu__basket flex">
                         <button type="button" data-toggle="dropdown" data-loading-text="" class="dropdown-toggle">
                             <img src="image/catalog/basket.svg" alt="basket" title="">
                             <span id="cart-total">0</span>
                         </button>
-                    </div>
+                    </div> #}
+
+                    {{ cart }}
 
                     <div class="header-menu__favorite">
                         <a href="">

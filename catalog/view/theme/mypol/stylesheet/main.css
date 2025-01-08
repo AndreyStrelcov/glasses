@@ -11,7 +11,9 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
-/*Base end*/
+:root {
+  --red: #b40400;
+} /*Base end*/
 /*Grid block*/
 .container-default {
   max-width: 1400px;
@@ -161,14 +163,17 @@ html {
   justify-content: space-between;
   height: 80px;
 }
+.header-second__right {
+  gap: 5px;
+}
 
 .header-menu__list .last-item a {
-  color: #b40400;
+  color: var(--red);
 }
 
 .header-menu__search {
   position: relative;
-  margin-right: 10px;
+  margin-right: -10px;
 }
 
 .header-input {
@@ -263,20 +268,19 @@ html {
   .header-menu__active {
     right: 0px;
   }
-  .header-menu__search {
-    margin-right: 0;
-  }
-  .search-form-wrapper {
-    display: flex;
-  }
-  .search-btn {
-    background: #e5e5e5;
-    border: none;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
-    width: 40px;
-  }
 }
+.search-form-wrapper {
+  display: flex;
+}
+
+.search-btn {
+  background: #e5e5e5;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  width: 40px;
+}
+
 .search-popup {
   display: none;
   position: fixed;

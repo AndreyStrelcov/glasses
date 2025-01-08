@@ -3,14 +3,17 @@
 .header-second {
     justify-content: space-between;
     height: 80px;
+    &__right {
+        gap: 5px;
+    }
 }
 //Color last element in menu//
 .header-menu__list .last-item a {
-    color: #b40400;
+    color: var(--red);
 }
 .header-menu__search {
     position: relative;
-    margin-right: 10px;
+    margin-right: -10px;
 }
 .header-input {
     padding: 10px;
@@ -108,21 +111,17 @@
         right: 0px;
     }
     // Hamburger menu end
-
-    // Search start
-    .header-menu__search {
-        margin-right: 0;
-    }
-    .search-form-wrapper {
-        display: flex;
-      }
-      .search-btn {
-        background: #e5e5e5;
-        border: none;
-        cursor: pointer;
-        border-radius: 0 5px 5px 0;
-        width: 40px;
-      }
+}
+// Search start
+.search-form-wrapper {
+    display: flex;
+  }
+  .search-btn {
+    background: #e5e5e5;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    width: 40px;
 }
 // Стили для всплывающего окна //
 .search-popup {
