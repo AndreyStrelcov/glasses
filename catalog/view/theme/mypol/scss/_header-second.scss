@@ -23,6 +23,7 @@
 }
 .header-menu {
     &__basket {
+        width: auto;
         button {
             position: relative;
             background: none;
@@ -158,3 +159,20 @@
     right: 10px;
     color: #fff;
   }/* Header second end */
+
+.dropdown-menu-right {
+    padding: 10px 20px;
+    border: none;
+    li {
+        margin-bottom: 5px;
+    a {
+        color: #fff;
+        background: $black;
+        padding: 7px 20px;
+        border-radius: 5px;
+        &:hover {
+            // color: $brown;
+            }
+        }
+    }
+}

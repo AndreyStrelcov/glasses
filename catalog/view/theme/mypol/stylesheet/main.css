@@ -183,6 +183,9 @@ html {
   box-shadow: none;
 }
 
+.header-menu__basket {
+  width: auto;
+}
 .header-menu__basket button {
   position: relative;
   background: none;
@@ -313,6 +316,19 @@ html {
   right: 10px;
   color: #fff;
 } /* Header second end */
+.dropdown-menu-right {
+  padding: 10px 20px;
+  border: none;
+}
+.dropdown-menu-right li {
+  margin-bottom: 5px;
+}
+.dropdown-menu-right li a {
+  color: #fff;
+  background: #292929;
+  padding: 7px 20px;
+  border-radius: 5px;
+}
 .header-promo {
   height: 36px;
   justify-content: center;
