@@ -1,6 +1,23 @@
 @use "base" as *;
-.banner {
-    img {
-    max-width: 1920px;
-    }
+#slideshow-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
+
+.slideshow-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow-item img {
+    width: 100%; /* Изображение растянуто по ширине */
+    height: auto; /* Сохраняем пропорции */
+    display: block;
+}
+

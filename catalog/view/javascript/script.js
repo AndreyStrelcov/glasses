@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 // Mobile menu end
 
-// Получаем элементы
+// Search start
 const openSearch = document.getElementById('openSearch');
 const closeSearch = document.getElementById('closeSearch');
 const searchPopup = document.getElementById('searchPopup');
@@ -41,7 +41,7 @@ window.addEventListener('click', (event) => {
     searchPopup.style.display = 'none';
   }
 });
-
+// Search end
 
 
 
