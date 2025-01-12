@@ -5,12 +5,10 @@
 a {
     text-decoration: none;
 }
-
-// Fonts
-html {
-    font-family: "Montserrat", sans-serif;
+ol,
+ul {
+    list-style: none;
 }
-
 // Colors
 $red: #b40400;
 $black: #292929;
@@ -18,8 +16,26 @@ $border: #e5e5e5;
 $footer-txt: #cfcfcf;
 $footer-border: #282828;
 $brown: #ae946d;
-
+$white: #ffffff;
 
 :root {
     --red: #b40400;
-}/*Base end*/
+    --black: #292929;
+    --border: #e5e5e5;
+    --footer-txt: #cfcfcf;
+    --footer-border: #282828;
+    --brown: #ae946d;
+    --white: #ffffff;
+} 
+
+html, body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $black;
+}
+
+/*Base end*/
+

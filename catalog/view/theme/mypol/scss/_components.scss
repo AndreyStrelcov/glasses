@@ -8,10 +8,10 @@
     text-align: left;
     border-radius: 5px;
     box-shadow: 0 1px 0 0 #eae9e5,0 3px 24px -2px rgba(58,72,80,.34);
-    background: #fff;
+    background: $white;
     width: 200px;
     & a {
-        color: #292929;
+        color: $black;
     }
     & li:last-child {
         margin-top: 15px;
@@ -24,11 +24,7 @@
     cursor: pointer;  
 }
 // Limited line
-.line-v ::before {
-    content: " | ";
-    margin: 0 5px 0 2px;
-    color:#ffffff;
-}
+
 .line-b {
     border-bottom: 1px solid $border;
 }

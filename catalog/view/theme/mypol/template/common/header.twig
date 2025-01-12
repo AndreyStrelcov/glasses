@@ -49,8 +49,6 @@
 {% endfor %}
 
 {# Customized stylesheet #}
-<link href="catalog/view/theme/mypol/stylesheet/reset.css" rel="stylesheet">
-{# <link href="catalog/view/theme/mypol/stylesheet/normalize.css" rel="stylesheet"> #}
 <link href="catalog/view/theme/mypol/stylesheet/main.css" rel="stylesheet">
 
 {% for script in scripts %}
@@ -118,7 +116,7 @@
 
         {# Header second start #}
         <div class="line-b">
-            <div class="container-default header-second flex items-center">               
+            <div class="container-default header-second flex items-center justify-between">               
                 <div class="header-logo">
                     {% if logo %}
                         {% if home == og_url %}

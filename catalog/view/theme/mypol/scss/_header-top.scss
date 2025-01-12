@@ -16,6 +16,11 @@
         position: relative;
     }
 }
+.line-v ::before {
+    content: " | ";
+    margin: 0 5px 0 2px;
+    color: $white;
+}
 .h-36 {
     height: 36px;
 }
@@ -45,7 +50,7 @@
 }
 .btn-list {
     & span {
-        color: #ffffff;
+        color: $white;
     } 
     & svg {
         margin-right: 10px;
@@ -54,7 +59,7 @@
 
 .header-top__right {
     & a {
-        color: #ffffff;
+        color: $white;
     }
     &--mob {
         display: none;
@@ -65,7 +70,7 @@
         display: none;
         &--mob {
             display: block;
-            color: #ffffff;
+            color: $white;
         }
     }
 }/*Header top end*/

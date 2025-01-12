@@ -1,15 +1,21 @@
 @use "base" as *;
-/*Heade second block*/
+/*Header second block*/
 .header-second {
-    justify-content: space-between;
+    font-size: 16px;
     height: 80px;
     &__right {
         gap: 5px;
     }
 }
-//Color last element in menu//
-.header-menu__list .last-item a {
-    color: var(--red);
+//Color last element in menu
+// .header-menu__list .last-item a {
+//     color: var(--red);
+// }
+.header-menu__list {
+    margin-bottom: 0;
+    & .last-item a {
+        color: var(--red);
+    }
 }
 .header-menu__search {
     position: relative;
@@ -34,6 +40,7 @@
             font-size: 13px;
             font-weight: 500;
             right: 1px;
+            top: -2px;
             color: $red;
         }
     }
@@ -135,7 +142,7 @@
     background: rgba(15,15,15,.7);
     z-index: 1000;
     justify-content: center;
-    align-items: center;
+    align-items: start;
   }
   
   // Содержимое окна //
@@ -144,8 +151,9 @@
     padding: 20px;
     border-radius: 10px;
     width: 90%;
-    max-width: 600px;
+    // max-width: 600px;
     text-align: center;
+    margin-top: 100px;
   }
   
   // Кнопка закрытия //
@@ -156,7 +164,7 @@
     cursor: pointer;
     position: absolute;
     top: 40px;
-    right: 10px;
+    right: 30px;
     color: #fff;
   }/* Header second end */
 
@@ -166,13 +174,10 @@
     li {
         margin-bottom: 5px;
     a {
-        color: #fff;
+        color: $white;
         background: $black;
         padding: 7px 20px;
         border-radius: 5px;
-        &:hover {
-            // color: $brown;
-            }
         }
     }
 }
