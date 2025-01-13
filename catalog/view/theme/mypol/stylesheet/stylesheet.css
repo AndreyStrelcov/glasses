@@ -164,12 +164,11 @@ div.required .control-label:before {
 	color: #444;
 }
 #cart .dropdown-menu {
-	background: #fff; /*изменил цвет*/
+	background: #eee;
 	z-index: 1001;
 }
 #cart .dropdown-menu {
 	min-width: 100%;
-	width: 250px; /*добавил ширину*/
 	overflow-y: auto;
 	max-height: 800px;
 	scrollbar-width: thin;

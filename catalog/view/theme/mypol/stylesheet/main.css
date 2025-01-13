@@ -32,6 +32,26 @@ html, body {
   color: #292929;
 }
 
+#cart .dropdown-menu {
+  background: #fff;
+}
+
+#cart .dropdown-menu {
+  width: 250px;
+  border: none;
+}
+
+.btn-group.open .dropdown-toggle {
+  box-shadow: none;
+}
+
+.swiper-viewport {
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 /*Base end*/
 /*Grid block*/
 .container-default {
@@ -337,7 +357,7 @@ html, body {
   position: absolute;
   top: 40px;
   right: 30px;
-  color: #fff;
+  color: #ffffff;
 } /* Header second end */
 .dropdown-menu-right {
   padding: 10px 20px;
@@ -354,16 +374,18 @@ html, body {
 }
 
 .header-promo {
-  height: 36px;
+  height: 38px;
   justify-content: center;
 }
 .header-promo a {
   color: #292929;
   font-size: 14px;
+  font-weight: 600;
 }
 .header-promo span {
   color: #b40400;
-  font-size: 18px;
+  font-size: 20px;
+  font-style: italic;
 }
 
 #slideshow-wrapper {
