@@ -23,6 +23,41 @@
     border: none;
     cursor: pointer;  
 }
+// Castom edit stylesheets.css, bootstrap.css and opencart.css styles
+#cart .dropdown-menu {
+	background: #fff;
+}
+#cart .dropdown-menu {
+    width: 250px;
+    border: none;
+}
+.btn-group.open .dropdown-toggle {
+    box-shadow: none;
+}
+.swiper-viewport {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+/* buttons */
+.btn {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+  .btn-primary {
+	color: #ffffff;
+	text-shadow: none;
+	background-color: $black;
+	background-image: none;
+    border: none;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+	background-color: $black;
+	background-position: 0 -15px;
+    color: $brown;
+}  
 // Limited line
 
 .line-b {

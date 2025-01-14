@@ -32,26 +32,6 @@ html, body {
   color: #292929;
 }
 
-#cart .dropdown-menu {
-  background: #fff;
-}
-
-#cart .dropdown-menu {
-  width: 250px;
-  border: none;
-}
-
-.btn-group.open .dropdown-toggle {
-  box-shadow: none;
-}
-
-.swiper-viewport {
-  background: #fff;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-
 /*Base end*/
 /*Grid block*/
 .container-default {
@@ -109,6 +89,47 @@ html, body {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+#cart .dropdown-menu {
+  background: #fff;
+}
+
+#cart .dropdown-menu {
+  width: 250px;
+  border: none;
+}
+
+.btn-group.open .dropdown-toggle {
+  box-shadow: none;
+}
+
+.swiper-viewport {
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* buttons */
+.btn {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.btn-primary {
+  color: #ffffff;
+  text-shadow: none;
+  background-color: #292929;
+  background-image: none;
+  border: none;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+  background-color: #292929;
+  background-position: 0 -15px;
+  color: #ae946d;
 }
 
 .line-b {
@@ -414,6 +435,8 @@ html, body {
   background-color: #080808;
   color: #cfcfcf;
   margin-top: 80px;
+  padding-top: 0;
+  border: none;
 }
 .footer-wrapper {
   padding-top: 60px;

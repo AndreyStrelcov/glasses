@@ -17,6 +17,7 @@ $footer-txt: #cfcfcf;
 $footer-border: #282828;
 $brown: #ae946d;
 $white: #ffffff;
+$footer-bg: #080808;
 
 :root {
     --red: #b40400;
@@ -36,22 +37,6 @@ html, body {
     line-height: 1.5;
     color: $black;
 }
-// Castom edit stylesheets.css, bootstrap.css and opencart.css styles
-#cart .dropdown-menu {
-	background: #fff;
-}
-#cart .dropdown-menu {
-    width: 250px;
-    border: none;
-}
-.btn-group.open .dropdown-toggle {
-    box-shadow: none;
-}
-.swiper-viewport {
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
+
 /*Base end*/
 
