@@ -11,12 +11,15 @@
     &-top {
         justify-content: space-between;
     }
+    &-list {
+        padding-left: 0;
+    }
 }
 .footer-contact {
     flex: 0 0 380px;
     border-right: 1px solid $footer-border;
     &__logo {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 }
 .footer-contact__item {
@@ -37,4 +40,12 @@
     a {
         color: #ffffff;
     }
+    li {
+        margin-bottom: 5px;
+    }
+}
+.footer-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
 }
