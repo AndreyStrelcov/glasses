@@ -14,9 +14,13 @@
     &-list {
         padding-left: 0;
     }
+    &-icon {
+        margin-top: 20px;
+        gap: 15px;
+    }
 }
 .footer-contact {
-    flex: 0 0 380px;
+    flex: 0 0 350px;
     border-right: 1px solid $footer-border;
     &__logo {
         margin-bottom: 40px;
@@ -48,4 +52,10 @@
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 40px;
+}
+.footer-bootom {
+    border-top: 1px solid $footer-border;
+    padding: 20px 0 20px 0;
+    text-align: right;
+    font-size: 13px;
 }
