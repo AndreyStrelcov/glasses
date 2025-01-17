@@ -42,7 +42,7 @@
 }
 .f-column {
     a {
-        color: #ffffff;
+        color: $white;
     }
     li {
         margin-bottom: 5px;
@@ -70,5 +70,12 @@
     }
     .footer-contact {
         border-right: none;
+        align-items: center;
+        &__item {
+            text-align: center;
+        }
+    }
+    .f-column {
+        padding-left: 10px;
     }
 }

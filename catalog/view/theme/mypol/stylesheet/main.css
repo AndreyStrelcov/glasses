@@ -510,6 +510,13 @@ html, body {
   }
   .footer-contact {
     border-right: none;
+    align-items: center;
+  }
+  .footer-contact__item {
+    text-align: center;
+  }
+  .f-column {
+    padding-left: 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */
