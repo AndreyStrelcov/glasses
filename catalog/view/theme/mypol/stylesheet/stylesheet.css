@@ -345,16 +345,21 @@ footer h5 {
 .breadcrumb {
 	margin: 0 0 20px 0;
 	padding: 8px 0;
-	border: 1px solid #ddd;
+	/*border: 1px solid #ddd;*/
+	background-color: #fff;
+}
+.breadcrumb > li > a {
+	color: #292929;
 }
 .breadcrumb i {
 	font-size: 15px;
 }
 .breadcrumb > li {
-	text-shadow: 0 1px 0 #FFF;
-	padding: 0 20px;
+	/*text-shadow: 0 1px 0 #FFF;*/
+	padding: 0 10px;
 	position: relative;
 	white-space: nowrap;
+	font-weight: 500;
 }
 .breadcrumb > li + li:before {
 	content: '';
@@ -364,16 +369,20 @@ footer h5 {
 	content: '';
 	display: block;
 	position: absolute;
-	top: -3px;
+	top: 7px;
 	right: -5px;
-	width: 26px;
-	height: 26px;
-	border-right: 1px solid #DDD;
-	border-bottom: 1px solid #DDD;
+	width: 8px;
+	height: 8px;
+	border-right: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
 	-webkit-transform: rotate(-45deg);
 	-moz-transform: rotate(-45deg);
 	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg);
+}
+.breadcrumb li:last-child a {
+    color: #ae946d; /* Цвет текста */
+    font-weight: bold; /* Дополнительно выделить жирным */
 }
 .pagination {
 	margin: 0;
